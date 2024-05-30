@@ -7,6 +7,7 @@ import AccessAlarmIcon from '@mui/icons-material/AccessAlarm'
 import ThreeDRotation from '@mui/icons-material/ThreeDRotation'
 import HomeIcon from '@mui/icons-material/Home'
 import { pink } from '@mui/material/colors'
+import Typography from '@mui/material/Typography'
 
 // // ✅ OK
 // import { Add as AddIcon } from '@mui/icons-material';
@@ -52,8 +53,11 @@ function App() {
         Click on the Vite and React logos to learn more
       </p> */}
       <div>huynhtuankietddt</div>
+
+      <Typography variant="body2" color="text.secondary">Test Typography</Typography>
+
       <Button variant="text">Text</Button>
-      <Button variant="contained">Contained</Button>
+      <Button variant="contained" color="success">Contained</Button>
       <Button variant="outlined">Outlined</Button>
       <br />
       <AccessAlarmIcon />
