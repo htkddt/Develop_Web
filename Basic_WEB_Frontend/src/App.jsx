@@ -8,6 +8,21 @@ import ThreeDRotation from '@mui/icons-material/ThreeDRotation'
 import HomeIcon from '@mui/icons-material/Home'
 import { pink } from '@mui/material/colors'
 
+// // ✅ OK
+// import { Add as AddIcon } from '@mui/icons-material';
+// import { Tabs } from '@mui/material';
+// //                         ^^^^^^^^ 1st or top-level
+
+// // ✅ OK
+// import AddIcon from '@mui/icons-material/Add';
+// import Tabs from '@mui/material/Tabs';
+// //                              ^^^^ 2nd level
+
+// // ❌ NOT OK
+// import TabIndicator from '@mui/material/Tabs/TabIndicator';
+// //                                           ^^^^^^^^^^^^ 3rd level
+
+
 function App() {
   //const [count, setCount] = useState(0)
 
