@@ -1,17 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// import { useState } from 'react'
+// import reactLogo from './assets/react.svg'
+// import viteLogo from '/vite.svg'
+// import './App.css'
+import Button from '@mui/material/Button'
+import AccessAlarmIcon from '@mui/icons-material/AccessAlarm'
+import ThreeDRotation from '@mui/icons-material/ThreeDRotation'
+import HomeIcon from '@mui/icons-material/Home'
+import { pink } from '@mui/material/colors'
 
 function App() {
-  const [count, setCount] = useState(0)
+  //const [count, setCount] = useState(0)
 
   // const name = "HuynhTuanKiet"
   // console.log(count)
 
   return (
     <>
-      <div>
+      {/* <div>
         <a href="https://vitejs.dev" rel="noreferrer" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -30,7 +35,21 @@ function App() {
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
-      </p>
+      </p> */}
+      <div>huynhtuankietddt</div>
+      <Button variant="text">Text</Button>
+      <Button variant="contained">Contained</Button>
+      <Button variant="outlined">Outlined</Button>
+      <br />
+      <AccessAlarmIcon />
+      <ThreeDRotation />
+      <br />
+      <HomeIcon color="primary" />
+      <HomeIcon color="secondary" />
+      <HomeIcon color="success" />
+      <HomeIcon color="action" />
+      <HomeIcon color="disabled" />
+      <HomeIcon sx={{ color: pink[500] }} />
     </>
   )
 }
