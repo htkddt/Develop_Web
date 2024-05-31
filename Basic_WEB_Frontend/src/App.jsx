@@ -8,6 +8,20 @@ import ThreeDRotation from '@mui/icons-material/ThreeDRotation'
 import HomeIcon from '@mui/icons-material/Home'
 import { pink } from '@mui/material/colors'
 import Typography from '@mui/material/Typography'
+import { useColorScheme } from '@mui/material/styles'
+
+function ModeToggle() {
+  const { mode, setMode } = useColorScheme()
+  return (
+    <Button
+      onClick={() => {
+        setMode(mode === 'light' ? 'dark' : 'light')
+      }}
+    >
+      {mode === 'light' ? 'Turn dark' : 'Turn light'}
+    </Button>
+  )
+}
 
 // // ✅ OK
 // import { Add as AddIcon } from '@mui/icons-material';
@@ -52,6 +66,8 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p> */}
+      <ModeToggle />
+      <hr />
       <div>huynhtuankietddt</div>
 
       <Typography variant="body2" color="text.secondary">Test Typography</Typography>
