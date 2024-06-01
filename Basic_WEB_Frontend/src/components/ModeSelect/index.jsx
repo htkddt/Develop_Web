@@ -23,6 +23,9 @@ function ModeSelect() {
         id="select-dark-light-mode"
         value={mode}
         label="Mode"
+        sx={{ '&:focus': { backgroundColor: 'white' }, // Chỉnh màu nền của thẻ Select luôn là màu trắng dù là mode Light hay mode Dark
+          '& svg': { fill: 'black' }, // Chỉnh màu mũi tên của thẻ Select luôn là màu đen dù là mode Light hay mode Dark
+          color: 'black' }} // Chỉnh chữ trong các option của thẻ Select luôn là màu đen dù là mode Light hay mode Dark
         onChange={handleChange}
       >
         <MenuItem value="light">
