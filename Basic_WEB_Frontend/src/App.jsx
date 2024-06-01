@@ -53,7 +53,7 @@
 // import TabIndicator from '@mui/material/Tabs/TabIndicator';
 // //                                           ^^^^^^^^^^^^ 3rd level
 
-import Board from './pages/Boards/_id'
+import Board from '~/pages/Boards/_id'
 // Update
 
 function App() {
