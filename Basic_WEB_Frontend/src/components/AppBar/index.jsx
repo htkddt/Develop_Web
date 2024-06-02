@@ -5,10 +5,12 @@ function AppBar() {
   return (
     <Box sx={{
       backgroundColor: 'primary.light',
-      width: '100%',
+      width: (theme) => theme.layoutCustom.layoutwidth,
       height: (theme) => theme.layoutCustom.appBar_height,
       display: 'flex',
-      alignItems: 'center'
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      color: 'black'
     }}>
       App Bar
       <ModeSelect />

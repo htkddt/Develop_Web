@@ -4,10 +4,11 @@ function BoardBar() {
   return (
     <Box sx={{
       backgroundColor: 'primary.dark',
-      width: '100%',
+      width: (theme) => theme.layoutCustom.layoutwidth,
       height: (theme) => theme.layoutCustom.boardBar_height,
       display: 'flex',
-      alignItems: 'center'
+      alignItems: 'center',
+      color: 'black'
     }}>
       Board Bar
     </Box>

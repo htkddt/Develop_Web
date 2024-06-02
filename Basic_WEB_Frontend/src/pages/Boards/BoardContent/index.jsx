@@ -4,10 +4,11 @@ function BoardContent() {
   return (
     <Box sx={{
       backgroundColor: 'primary.main',
-      width: '100%',
+      width: (theme) => theme.layoutCustom.layoutwidth,
       height: (theme) => `calc(100vh - ${theme.layoutCustom.appBar_height} - ${theme.layoutCustom.boardBar_height})`,
       display: 'flex',
-      alignItems: 'center'
+      alignItems: 'center',
+      color: 'black'
     }}>
       Board Contents
     </Box>
