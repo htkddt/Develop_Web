@@ -3,7 +3,7 @@ import Box from '@mui/material/Box'
 function BoardBar() {
   return (
     <Box sx={{
-      backgroundColor: 'primary.dark',
+      // backgroundColor: 'primary.dark',
       width: (theme) => theme.layoutCustom.layoutwidth,
       height: (theme) => theme.layoutCustom.boardBar_height,
       display: 'flex',

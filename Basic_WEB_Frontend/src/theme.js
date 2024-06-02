@@ -23,9 +23,9 @@ import { experimental_extendTheme as extendTheme } from '@mui/material/styles'
 
 const theme = extendTheme({
   layoutCustom: {
-    layoutwidth: '30%',
-    appBar_height: '48px',
-    boardBar_height: '58px'
+    layoutwidth: '100%',
+    appBar_height: '58px',
+    boardBar_height: '60px'
   },
   colorSchemes: {
     light: {
@@ -39,7 +39,6 @@ const theme = extendTheme({
       // spacing: (factor) => `${0.25 * factor}rem`
       }
     },
-
     dark:{
       palette: {
         primary: blue
@@ -51,7 +50,44 @@ const theme = extendTheme({
       // spacing: (factor) => `${0.25 * factor}rem`
       }
     }
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: 'none'
+        }
+      }
+    },
+    MuiInputLabel: {
+      styleOverrides: {
+        root: {
+          color: 'black',
+          fontSize: '0.875rem'
+        }
+      }
+    },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          color: theme.palette.primary.main,
+          fontSize: '0.875rem',
+          '.MuiOutlinedInput-notchedOutline': {
+            borderColor: 'black'
+          },
+          '&:hover': {
+            '.MuiOutlinedInput-notchedOutline': {
+              borderColor: theme.palette.primary.main
+            }
+          },
+          '& fieldset': {
+            borderWidth: '1px !importance'
+          }
+        })
+      }
+    }
   }
+  // ...  Other properties
 })
 
 export default theme
