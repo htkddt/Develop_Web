@@ -27,7 +27,7 @@ function AppBar() {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'space-between', // Canh lề cho text App Bar và ModeSelect nằm về 2 phía của thẻ Box
-      color: 'black'
+      // color: 'black'
     }}>
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
         <AppsIcon />
