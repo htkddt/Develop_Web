@@ -27,7 +27,9 @@ function AppBar() {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'space-between', // Canh lề cho text App Bar và ModeSelect nằm về 2 phía của thẻ Box
-      color: 'black'
+      color: 'black',
+      gap: 3,
+      overflowX: 'auto'
     }}>
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
         <AppsIcon />
@@ -36,24 +38,27 @@ function AppBar() {
           <Typography variant="span" sx={{ fontSize: '1.2rem', fontWeight: 'bold' }}>179FC</Typography>
         </Box>
 
-        <Workspaces />
-        <Recent />
-        <Starred />
-        <Templates />
+        <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 1 }}>
+          <Workspaces />
+          <Recent />
+          <Starred />
+          <Templates />
 
-        <Button sx={{ color: 'black',
-          borderColor: 'black',
-          '&:hover': {
-            borderColor: 'black'
-          }
-        }}
-        variant="outlined"
-        endIcon={<AddIcon />}>Create</Button>
+          <Button sx={{ color: 'black',
+            borderColor: 'black',
+            '&:hover': {
+              borderColor: 'black'
+            }
+          }}
+          variant="outlined"
+          endIcon={<AddIcon />}>Create</Button>
+        </Box>
+
       </Box>
 
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
         <SearchIcon />
-        <TextField id="outlined-search" label="Search ..." type="search" size='small' />
+        <TextField id="outlined-search" label="Search ..." type="search" size='small' sx={{ minWidth: '120px' }} />
         <ModeSelect />
         <Tooltip title="Notification">
           <Badge color="secondary" variant="dot" sx={{ cursor: 'pointer' }}>
