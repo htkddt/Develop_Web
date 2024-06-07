@@ -1,5 +1,4 @@
 import { useColorScheme } from '@mui/material/styles'
-import InputLabel from '@mui/material/InputLabel'
 import MenuItem from '@mui/material/MenuItem'
 import FormControl from '@mui/material/FormControl'
 import Select from '@mui/material/Select'
@@ -17,12 +16,12 @@ function ModeSelect() {
 
   return (
     <FormControl size="small" sx={{ minWidth: '120px' }} >
-      <InputLabel id="label-select-dark-light-mode">Mode</InputLabel>
+      {/* <InputLabel id="label-select-dark-light-mode">Mode</InputLabel> */}
       <Select
         labelId="label-select-dark-light-mode"
         id="select-dark-light-mode"
         value={mode}
-        label="Mode"
+        // label="Mode"
         sx={{ '&:focus': { backgroundColor: 'white' }, // Chỉnh màu nền của thẻ Select luôn là màu trắng dù là mode Light hay mode Dark
           '& svg': { fill: 'black' }, // Chỉnh màu mũi tên của thẻ Select luôn là màu đen dù là mode Light hay mode Dark
           color: 'black' }} // Chỉnh chữ trong các option của thẻ Select luôn là màu đen dù là mode Light hay mode Dark

@@ -16,7 +16,7 @@ import Badge from '@mui/material/Badge'
 import Tooltip from '@mui/material/Tooltip'
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline'
 import Profiles from './Menus/Profiles'
-import AddIcon from '@mui/icons-material/Add'
+import LibraryAddIcon from '@mui/icons-material/LibraryAdd'
 
 function AppBar() {
   return (
@@ -24,20 +24,25 @@ function AppBar() {
       width: (theme) => theme.layoutCustom.layoutwidth,
       height: (theme) => theme.layoutCustom.appBar_height
     }}>
-      <Box px={2} sx={{
+      <Box sx={{
         backgroundColor: 'primary.light',
         width: (theme) => theme.layoutCustom.layoutwidth,
-        height: '60px',
+        height: (theme) => theme.layoutCustom.appBar_height,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between', // Canh lề cho text App Bar và ModeSelect nằm về 2 phía của thẻ Box
         color: 'black',
         gap: 3,
+        paddingX: 2,
         overflowX: 'auto'
       }}>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
           <AppsIcon />
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.1 }}>
+          <Box sx={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 0.1
+          }}>
             <SvgIcon component={ LogoIcon } inheritViewBox />
             <Typography variant="span" sx={{ fontSize: '1.2rem', fontWeight: 'bold' }}>179FC</Typography>
           </Box>
@@ -55,12 +60,19 @@ function AppBar() {
               }
             }}
             variant="outlined"
-            endIcon={<AddIcon />}>Create</Button>
+            startIcon={<LibraryAddIcon />}>Create</Button>
           </Box>
-
         </Box>
 
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+        <Box sx={{ display: 'flex',
+          alignItems: 'center',
+          gap: 2,
+          color: 'black',
+          borderColor: 'black',
+          '&:hover': {
+            borderColor: 'black'
+          }
+        }}>
           <SearchIcon />
           <TextField id="outlined-search" label="Search ..." type="search" size='small' sx={{ minWidth: '120px' }} />
           <ModeSelect />
