@@ -31,7 +31,7 @@ function BoardBar() {
         <Box sx={{
           backgroundColor: '#ffeaa7',
           width: '80%',
-          height: '100px',
+          height: '330px',
           display: 'flex',
           alignItems: 'center', // Canh giữa nội dung theo chiều dọc
           justifyContent: 'center', // Canh giữa nội dung theo chiều ngang
@@ -50,7 +50,7 @@ function BoardBar() {
         <Box sx={{
           backgroundColor: '#2ed573',
           width: '30%',
-          height: '25px',
+          height: '50px',
           display: 'flex',
           alignItems: 'center', // Canh giữa nội dung theo chiều dọc
           justifyContent: 'center', // Canh giữa nội dung theo chiều ngang
@@ -60,10 +60,11 @@ function BoardBar() {
         }}>
           Header Title 1
         </Box>
+        <br />
         <Box sx={{
           backgroundColor: '#7bed9f',
           width: '80%',
-          height: '50px',
+          height: '120px',
           display: 'flex',
           alignItems: 'center', // Canh giữa nội dung theo chiều dọc
           justifyContent: 'center', // Canh giữa nội dung theo chiều ngang
@@ -73,11 +74,11 @@ function BoardBar() {
         }}>
           Header Title Content 1
         </Box>
-        <br />
+        <hr />
         <Box sx={{
           backgroundColor: '#2ed573',
           width: '30%',
-          height: '25px',
+          height: '50px',
           display: 'flex',
           alignItems: 'center', // Canh giữa nội dung theo chiều dọc
           justifyContent: 'center', // Canh giữa nội dung theo chiều ngang
@@ -87,10 +88,11 @@ function BoardBar() {
         }}>
           Header Title 2
         </Box>
+        <br />
         <Box sx={{
           backgroundColor: '#7bed9f',
           width: '80%',
-          height: '50px',
+          height: '120px',
           display: 'flex',
           alignItems: 'center', // Canh giữa nội dung theo chiều dọc
           justifyContent: 'center', // Canh giữa nội dung theo chiều ngang
