@@ -7,7 +7,11 @@ import Divider from '@mui/material/Divider'
 import ListItemText from '@mui/material/ListItemText'
 import ListItemIcon from '@mui/material/ListItemIcon'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
-import Check from '@mui/icons-material/Check'
+import Typography from '@mui/material/Typography'
+import ContentCut from '@mui/icons-material/ContentCut'
+import ContentCopy from '@mui/icons-material/ContentCopy'
+import ContentPaste from '@mui/icons-material/ContentPaste'
+import Cloud from '@mui/icons-material/Cloud'
 
 function Recent() {
   const [anchorEl, setAnchorEl] = React.useState(null)
@@ -42,30 +46,38 @@ function Recent() {
         }}
       >
         <MenuItem>
-          <ListItemText inset>Single</ListItemText>
-        </MenuItem>
-        <MenuItem>
-          <ListItemText inset>1.15</ListItemText>
-        </MenuItem>
-        <MenuItem>
-          <ListItemText inset>Double</ListItemText>
+          <ListItemIcon>
+            <ContentCut fontSize="small" />
+          </ListItemIcon>
+          <ListItemText>Cut</ListItemText>
+          <Typography variant="body2" color="text.secondary">
+            ⌘X
+          </Typography>
         </MenuItem>
         <MenuItem>
           <ListItemIcon>
-            <Check />
+            <ContentCopy fontSize="small" />
           </ListItemIcon>
-          Custom: 1.2
+          <ListItemText>Copy</ListItemText>
+          <Typography variant="body2" color="text.secondary">
+            ⌘C
+          </Typography>
+        </MenuItem>
+        <MenuItem>
+          <ListItemIcon>
+            <ContentPaste fontSize="small" />
+          </ListItemIcon>
+          <ListItemText>Paste</ListItemText>
+          <Typography variant="body2" color="text.secondary">
+            ⌘V
+          </Typography>
         </MenuItem>
         <Divider />
         <MenuItem>
-          <ListItemText>Add space before paragraph</ListItemText>
-        </MenuItem>
-        <MenuItem>
-          <ListItemText>Add space after paragraph</ListItemText>
-        </MenuItem>
-        <Divider />
-        <MenuItem>
-          <ListItemText>Custom spacing...</ListItemText>
+          <ListItemIcon>
+            <Cloud fontSize="small" />
+          </ListItemIcon>
+          <ListItemText>Web Clipboard</ListItemText>
         </MenuItem>
       </Menu>
     </Box>
