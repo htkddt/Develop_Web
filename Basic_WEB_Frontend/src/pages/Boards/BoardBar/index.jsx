@@ -7,10 +7,13 @@ function BoardBar() {
       width: (theme) => theme.layoutCustom.layoutwidth,
       height: (theme) => theme.layoutCustom.boardBar_height,
       display: 'flex',
-      alignItems: 'center',
-      color: 'black'
+      alignItems: 'center', // Canh giữa nội dung theo chiều dọc
+      justifyContent: 'center', // Canh giữa nội dung theo chiều ngang
+      color: 'black',
+      margin: '0 auto'
     }}>
-      <Box sx={{
+      Board Bar
+      {/* <Box sx={{
         width: '50%',
         height: (theme) => theme.layoutCustom.boardBar_height
       }}>
@@ -102,7 +105,7 @@ function BoardBar() {
         }}>
           Header Title Content 2
         </Box>
-      </Box>
+      </Box> */}
     </Box>
   )
 }
