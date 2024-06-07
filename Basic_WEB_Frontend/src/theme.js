@@ -24,8 +24,8 @@ import { experimental_extendTheme as extendTheme } from '@mui/material/styles'
 const theme = extendTheme({
   layoutCustom: {
     layoutwidth: '100%',
-    appBar_height: '58px',
-    boardBar_height: '60px'
+    appBar_height: '48px',
+    boardBar_height: '58px'
   },
   colorSchemes: {
     light: {
