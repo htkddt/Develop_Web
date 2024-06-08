@@ -12,15 +12,15 @@ import Button from '@mui/material/Button'
 import PersonAddIcon from '@mui/icons-material/PersonAdd'
 
 const MENU_STYLES = {
-  color: 'black',
-  bgcolor: 'white',
+  color: 'white',
+  bgcolor: 'transparent',
   border: 'none',
   paddingX: '5px',
   borderRadius: '4px',
   fontSize: '13px',
   fontWeight: 'bold',
-  '& .MuiSvgIcon-root': {
-    color: 'primary.main'
+  '.MuiSvgIcon-root': {
+    color: 'white'
   },
   '&:hover': {
     bgcolor: 'primary.50'
@@ -40,7 +40,8 @@ function BoardBar() {
       gap: 2,
       paddingX: 2,
       overflowX: 'auto',
-      borderTop: '2px solid #d63031' // Vẽ đường kẻ nằm ngang với độ dày 2 pixel
+      bgcolor: (theme) => (theme.palette.mode === 'dark' ? '#34495e' : '#ff7675'),
+      borderBottom: '2px solid white' // Vẽ đường kẻ nằm ngang với độ dày 2 pixel
       // margin: '0 auto',
       // fontSize: '50px'
     }}>
@@ -77,28 +78,25 @@ function BoardBar() {
           clickable />
       </Box>
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-        <Button sx={{ color: 'black',
-          borderColor: 'black',
-          '&:hover': {
-            borderColor: 'black'
-          }
+        <Button sx={{ color: 'white',
+          borderColor: 'white',
+          '&:hover': { borderColor: 'white' }
         }}
         variant="outlined"
-        startIcon={<PersonAddIcon />}>Invite</Button>
+        startIcon={<PersonAddIcon />}
+        >
+          Invite
+        </Button>
         <AvatarGroup
           max={7}
           sx={{
             '& .MuiAvatar-root': {
               width: 34,
               height: 34,
-              fontSize: 16
+              fontSize: 16,
+              border: 'none'
             }
           }}>
-          <Tooltip title="HuynhTuanKiet">
-            <Avatar
-              alt="Huynh Tuan Kiet"
-              src="https://scontent-hkg1-2.xx.fbcdn.net/v/t39.30808-6/412946768_678616841131827_5178683579607036912_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeG7TY5fbY2cCnV5f096h2Wg-kEhBr-4OCv6QSEGv7g4K-g7d_IYFyilMPmOYVvqbfetpddHZoxhJM1lk5DzPL5G&_nc_ohc=S2n5-pk8kIwQ7kNvgEUWgzZ&_nc_ht=scontent-hkg1-2.xx&oh=00_AYC5MQiggn1EYqnP0iemKXln510AFFQiCP_S525ivsCvkg&oe=6668C7A5" />
-          </Tooltip>
           <Tooltip title="BuiQuangMinhTruc">
             <Avatar
               alt="Bui Quang Minh Truc"

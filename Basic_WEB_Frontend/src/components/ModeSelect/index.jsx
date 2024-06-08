@@ -6,6 +6,7 @@ import Box from '@mui/material/Box'
 import LightModeIcon from '@mui/icons-material/LightMode'
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined'
 import SettingsBrightnessIcon from '@mui/icons-material/SettingsBrightness'
+import InputLabel from '@mui/material/InputLabel'
 
 function ModeSelect() {
   const { mode, setMode } = useColorScheme()
@@ -16,16 +17,29 @@ function ModeSelect() {
 
   return (
     <FormControl size="small" sx={{ minWidth: '120px' }} >
-      {/* <InputLabel id="label-select-dark-light-mode">Mode</InputLabel> */}
+      <InputLabel
+        id="label-select-dark-light-mode"
+        sx={{
+          color: 'white',
+          '&.Mui-focused': { color: 'white' }
+        }}
+      >
+        Mode
+      </InputLabel>
       <Select
         labelId="label-select-dark-light-mode"
         id="select-dark-light-mode"
         value={mode}
-        // label="Mode"
-        sx={{ '&:focus': { backgroundColor: 'white' }, // Chỉnh màu nền của thẻ Select luôn là màu trắng dù là mode Light hay mode Dark
-          '& svg': { fill: 'black' }, // Chỉnh màu mũi tên của thẻ Select luôn là màu đen dù là mode Light hay mode Dark
-          color: 'black' }} // Chỉnh chữ trong các option của thẻ Select luôn là màu đen dù là mode Light hay mode Dark
+        label="Mode"
         onChange={handleChange}
+        sx={{ color: 'white',
+          '.MuiOutlinedInput-notchedOutline': { borderColor: 'white' },
+          '&:hover .MuiOutlinedInput-notchedOutline': { borderColor: 'white' },
+          '&.Mui-focused .MuiOutlinedInput-notchedOutline': { borderColor: 'white' },
+          '.MuiSvgIcon-root': { color: 'white' }
+          // '&:focus': { backgroundColor: 'white' }, // Chỉnh màu nền của thẻ Select luôn là màu trắng dù là mode Light hay mode Dark
+          // '& svg': { fill: 'black' } // Chỉnh màu mũi tên của thẻ Select luôn là màu đen dù là mode Light hay mode Dark
+        }}
       >
         <MenuItem value="light">
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>

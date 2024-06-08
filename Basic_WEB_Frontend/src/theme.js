@@ -1,4 +1,4 @@
-import { blue, red } from '@mui/material/colors'
+// import { blue, red } from '@mui/material/colors'
 import { experimental_extendTheme as extendTheme } from '@mui/material/styles'
 // import { createTheme } from '@mui/material/styles'
 
@@ -28,43 +28,43 @@ const theme = extendTheme({
     boardBar_height: '58px'
   },
   colorSchemes: {
-    light: {
-      palette: {
-        primary: red
-        // secondary: deepOrange
-        // text: {
-        //   primary: 'black',
-        //   secondary: 'black'
-        // }
-      // spacing: (factor) => `${0.25 * factor}rem`
-      }
-    },
-    dark:{
-      palette: {
-        primary: blue
-        // secondary: deepPurple
-        // text: {
-        //   primary: 'black',
-        //   secondary: 'black'
-        // }
-      // spacing: (factor) => `${0.25 * factor}rem`
-      }
-    }
+    // light: {
+    //   palette: {
+    //     primary: red
+    //     // secondary: deepOrange
+    //     // text: {
+    //     //   primary: 'black',
+    //     //   secondary: 'black'
+    //     // }
+    //   // spacing: (factor) => `${0.25 * factor}rem`
+    //   }
+    // },
+    // dark:{
+    //   palette: {
+    //     primary: blue
+    //     // secondary: deepPurple
+    //     // text: {
+    //     //   primary: 'black',
+    //     //   secondary: 'black'
+    //     // }
+    //   // spacing: (factor) => `${0.25 * factor}rem`
+    //   }
+    // }
   },
   components: {
     MuiCssBaseline: {
       styleOverrides: {
         body: {
           '*::-webkit-scrollbar': {
-            width: '8px',
-            height: '8px'
+            width: '5px',
+            height: '5px'
           },
           '*::-webkit-scrollbar-thumb': {
-            backgroundColor: '#bdc3c7',
-            borderRadius: '8px'
+            backgroundColor: '#dcdde1',
+            borderRadius: '5px'
           },
           '*::-webkit-scrollbar-thumb:hover': {
-            backgroundColor: '#7f8c8d'
+            backgroundColor: 'white'
           }
         }
       }
@@ -72,35 +72,34 @@ const theme = extendTheme({
     MuiButton: {
       styleOverrides: {
         root: {
-          textTransform: 'none'
+          textTransform: 'none',
+          borderWidth: '0.5px'
+          // '&:hover': { borderWidth: '1px' }
         }
       }
     },
     MuiInputLabel: {
       styleOverrides: {
-        root: {
-          color: 'black',
-          fontSize: '0.875rem'
-        }
+        root: { fontSize: '0.875rem' }
       }
     },
     MuiOutlinedInput: {
       styleOverrides: {
-        root: ({ theme }) => ({
-          color: theme.palette.primary.main,
+        root: {
+          // color: theme.palette.primary.main,
           fontSize: '0.875rem',
-          '.MuiOutlinedInput-notchedOutline': {
-            borderColor: 'black'
-          },
-          '&:hover': {
-            '.MuiOutlinedInput-notchedOutline': {
-              borderColor: theme.palette.primary.main
-            }
-          },
-          '& fieldset': {
-            borderWidth: '1px !importance'
-          }
-        })
+          // '.MuiOutlinedInput-notchedOutline': {
+          //   borderColor: 'black'
+          // },
+          // '&:hover': {
+          //   '.MuiOutlinedInput-notchedOutline': {
+          //     borderColor: theme.palette.primary.main
+          //   }
+          // },
+          '& fieldset': { borderWidth: '0.5px !importance' },
+          '&:hover fieldset': { borderWidth: '1px !importance' },
+          '&.Mui-focused fieldset': { borderWidth: '1px !importance' }
+        }
       }
     }
   }
