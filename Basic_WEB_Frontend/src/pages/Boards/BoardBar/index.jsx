@@ -77,7 +77,8 @@ function BoardBar() {
           clickable />
       </Box>
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-        <Button sx={{ color: 'black',
+        <Button sx={{ bgcolor: 'white',
+          color: 'black',
           borderColor: 'black',
           '&:hover': {
             borderColor: 'black'
@@ -94,11 +95,6 @@ function BoardBar() {
               fontSize: 16
             }
           }}>
-          <Tooltip title="HuynhTuanKiet">
-            <Avatar
-              alt="Huynh Tuan Kiet"
-              src="https://scontent-hkg1-2.xx.fbcdn.net/v/t39.30808-6/412946768_678616841131827_5178683579607036912_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeG7TY5fbY2cCnV5f096h2Wg-kEhBr-4OCv6QSEGv7g4K-g7d_IYFyilMPmOYVvqbfetpddHZoxhJM1lk5DzPL5G&_nc_ohc=S2n5-pk8kIwQ7kNvgEUWgzZ&_nc_ht=scontent-hkg1-2.xx&oh=00_AYC5MQiggn1EYqnP0iemKXln510AFFQiCP_S525ivsCvkg&oe=6668C7A5" />
-          </Tooltip>
           <Tooltip title="BuiQuangMinhTruc">
             <Avatar
               alt="Bui Quang Minh Truc"

@@ -1,4 +1,4 @@
-import { blue, red } from '@mui/material/colors'
+// import { blue, red } from '@mui/material/colors'
 import { experimental_extendTheme as extendTheme } from '@mui/material/styles'
 // import { createTheme } from '@mui/material/styles'
 
@@ -28,28 +28,28 @@ const theme = extendTheme({
     boardBar_height: '58px'
   },
   colorSchemes: {
-    light: {
-      palette: {
-        primary: red
-        // secondary: deepOrange
-        // text: {
-        //   primary: 'black',
-        //   secondary: 'black'
-        // }
-      // spacing: (factor) => `${0.25 * factor}rem`
-      }
-    },
-    dark:{
-      palette: {
-        primary: blue
-        // secondary: deepPurple
-        // text: {
-        //   primary: 'black',
-        //   secondary: 'black'
-        // }
-      // spacing: (factor) => `${0.25 * factor}rem`
-      }
-    }
+    // light: {
+    //   palette: {
+    //     primary: red
+    //     // secondary: deepOrange
+    //     // text: {
+    //     //   primary: 'black',
+    //     //   secondary: 'black'
+    //     // }
+    //   // spacing: (factor) => `${0.25 * factor}rem`
+    //   }
+    // },
+    // dark:{
+    //   palette: {
+    //     primary: blue
+    //     // secondary: deepPurple
+    //     // text: {
+    //     //   primary: 'black',
+    //     //   secondary: 'black'
+    //     // }
+    //   // spacing: (factor) => `${0.25 * factor}rem`
+    //   }
+    // }
   },
   components: {
     MuiCssBaseline: {

@@ -10,9 +10,9 @@ function BoardContent() {
       alignItems: 'center', // Canh giữa nội dung theo chiều dọc
       justifyContent: 'center', // Canh giữa nội dung theo chiều ngang
       color: 'black',
+      borderTop: '2px solid #d63031' // Vẽ đường kẻ nằm ngang với độ dày 2 pixel
       // margin: '0 auto',
       // fontSize: '50px'
-      borderTop: '2px solid #d63031' // Vẽ đường kẻ nằm ngang với độ dày 2 pixel
     }}>
       Board Contents
     </Box>
