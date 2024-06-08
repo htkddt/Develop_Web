@@ -12,15 +12,15 @@ import Button from '@mui/material/Button'
 import PersonAddIcon from '@mui/icons-material/PersonAdd'
 
 const MENU_STYLES = {
-  color: 'black',
-  bgcolor: 'white',
+  color: 'white',
+  bgcolor: 'transparent',
   border: 'none',
   paddingX: '5px',
   borderRadius: '4px',
   fontSize: '13px',
   fontWeight: 'bold',
-  '& .MuiSvgIcon-root': {
-    color: 'primary.main'
+  '.MuiSvgIcon-root': {
+    color: 'white'
   },
   '&:hover': {
     bgcolor: 'primary.50'
@@ -40,7 +40,8 @@ function BoardBar() {
       gap: 2,
       paddingX: 2,
       overflowX: 'auto',
-      borderTop: '2px solid #d63031' // Vẽ đường kẻ nằm ngang với độ dày 2 pixel
+      bgcolor: (theme) => (theme.palette.mode === 'dark' ? '#34495e' : '#ff7675'),
+      borderBottom: '2px solid white' // Vẽ đường kẻ nằm ngang với độ dày 2 pixel
       // margin: '0 auto',
       // fontSize: '50px'
     }}>
@@ -77,22 +78,23 @@ function BoardBar() {
           clickable />
       </Box>
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-        <Button sx={{ bgcolor: 'white',
-          color: 'black',
-          borderColor: 'black',
-          '&:hover': {
-            borderColor: 'black'
-          }
+        <Button sx={{ color: 'white',
+          borderColor: 'white',
+          '&:hover': { borderColor: 'white' }
         }}
         variant="outlined"
-        startIcon={<PersonAddIcon />}>Invite</Button>
+        startIcon={<PersonAddIcon />}
+        >
+          Invite
+        </Button>
         <AvatarGroup
           max={7}
           sx={{
             '& .MuiAvatar-root': {
               width: 34,
               height: 34,
-              fontSize: 16
+              fontSize: 16,
+              border: 'none'
             }
           }}>
           <Tooltip title="BuiQuangMinhTruc">

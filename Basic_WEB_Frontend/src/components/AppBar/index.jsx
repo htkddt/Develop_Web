@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Box from '@mui/material/Box'
 import ModeSelect from '~/components/ModeSelect'
 import AppsIcon from '@mui/icons-material/Apps'
@@ -17,24 +18,28 @@ import Tooltip from '@mui/material/Tooltip'
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline'
 import Profiles from './Menus/Profiles'
 import LibraryAddIcon from '@mui/icons-material/LibraryAdd'
+import InputAdornment from '@mui/material/InputAdornment'
+import CloseIcon from '@mui/icons-material/Close'
 
 function AppBar() {
+  const [SearchValue, setSearchValue] = useState('')
   return (
     <Box sx={{
       width: (theme) => theme.layoutCustom.layoutwidth,
       height: (theme) => theme.layoutCustom.appBar_height
     }}>
       <Box sx={{
-        backgroundColor: 'primary.light',
+        // backgroundColor: 'primary.light',
         width: (theme) => theme.layoutCustom.layoutwidth,
         height: (theme) => theme.layoutCustom.appBar_height,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between', // Canh lề cho text App Bar và ModeSelect nằm về 2 phía của thẻ Box
-        color: 'black',
-        gap: 3,
+        color: 'white',
+        gap: 2,
         paddingX: 2,
-        overflowX: 'auto'
+        overflowX: 'auto',
+        bgcolor: (theme) => (theme.palette.mode === 'dark' ? '#2c3e50' : '#d63031')
       }}>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
           <AppsIcon />
@@ -43,7 +48,7 @@ function AppBar() {
             alignItems: 'center',
             gap: 0.1
           }}>
-            <SvgIcon component={ LogoIcon } inheritViewBox />
+            <SvgIcon component={ LogoIcon } inheritViewBox sx={{ color: 'white' }} />
             <Typography variant="span" sx={{ fontSize: '1.2rem', fontWeight: 'bold' }}>179FC</Typography>
           </Box>
 
@@ -53,31 +58,64 @@ function AppBar() {
             <Starred />
             <Templates />
 
-            <Button sx={{ color: 'black',
-              borderColor: 'black',
+            <Button sx={{ color: 'white',
+              border: 'none',
               '&:hover': {
-                borderColor: 'black'
+                border: 'none'
               }
             }}
             variant="outlined"
-            startIcon={<LibraryAddIcon />}>Create</Button>
+            startIcon={<LibraryAddIcon />}
+            >
+              Create
+            </Button>
           </Box>
         </Box>
 
         <Box sx={{ display: 'flex',
           alignItems: 'center',
-          gap: 2,
-          color: 'black',
-          borderColor: 'black',
-          '&:hover': {
-            borderColor: 'black'
-          }
+          gap: 2
+          // color: 'white',
+          // borderColor: 'black',
+          // '&:hover': {
+          //   borderColor: 'black'
+          // }
         }}>
-          <SearchIcon />
-          <TextField id="outlined-search" label="Search ..." type="search" size='small' sx={{ minWidth: '120px' }} />
+          <TextField
+            id="outlined-search"
+            label="Search"
+            type="text"
+            size='small'
+            value = {SearchValue}
+            onChange={(e) => setSearchValue(e.target.value)}
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  <SearchIcon sx={{ color: 'white' }} />
+                </InputAdornment>
+              ),
+              endAdornment: (
+                <CloseIcon
+                  fontSize='small'
+                  sx={{ color: SearchValue ? 'white' : 'transparent', cursor: 'pointer' }}
+                  onClick={() => setSearchValue('')} />
+              )
+            }}
+            sx={{
+              minWidth: '120px',
+              maxWidth: '200px',
+              '& label': { color: 'white' },
+              '& input': { color: 'white' },
+              '& label.Mui-focused': { color: 'white' },
+              '& .MuiOutlinedInput-root': {
+                '& fieldset': { borderColor: 'white' },
+                '&:hover fieldset': { borderColor: 'white' },
+                '&.Mui-focused fieldset': { borderColor: 'white' }
+              }
+            }} />
           <ModeSelect />
           <Tooltip title="Notification">
-            <Badge color="secondary" variant="dot" sx={{ cursor: 'pointer' }}>
+            <Badge color="primary" variant="dot" sx={{ cursor: 'pointer' }}>
               <NotificationsNoneIcon />
             </Badge>
           </Tooltip>
