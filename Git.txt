@@ -1,0 +1,16 @@
+Tạo branch: git checkout -b <Name branch>
+Quay về master hay 1 branch bất kỳ: git checkout <Name branch>
+Push code lên branch:
+	git add .
+	git commit -m "Status"
+	git push origin <Name branch>
+
+Sau khi push code lên branch, lên github cho phép Create Pull Request, Merge code vào master
+Pull code từ master về máy:
+	git checkout master
+	git pull origin master
+
+Push code lên github nhưng không tạo commit mới:
+	git add .
+	git commit --amend	->	:wq + enter (Linux: Lưu và thoát)
+	git push origin <Name branch> -f
